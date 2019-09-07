@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import StudentForm from './Form'
-//import StateProps from './StateProps'
+import StudentForm from './components/Form';
+import StateProps from './components/StateProps';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <StudentForm />
-      {/* <StateProps/> */}
+        {/* <StudentForm /> */}
+      <StateProps/>
      </React.Fragment>
     );
   }
