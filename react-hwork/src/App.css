@@ -1,0 +1,30 @@
+.studenform h2{
+  
+  margin: 2em 0;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.studenform .form-control{
+  height: 55px;
+  font-size: 16px
+}
+.studenform label {
+font-size: 16px
+}
+
+.studenform form {
+  clear: both;
+}
+
+.studenform textarea.form-control{
+  height: 100px;
+}
+
+
+.studenform .card {
+  float: left;
+  width: 18%;
+  margin:2% 2% 0 0
+}
