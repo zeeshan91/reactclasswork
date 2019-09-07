@@ -69,11 +69,7 @@ export default class StudentForm extends Component {
       <textarea   onChange={e=>{ this.setState({ msg: e.target.value   }); }} className="form-control" id="description" placeholder="Enter Description" name="description"></textarea>
 
     </div>
-    <div className="form-group">
-      <label for="description">Upload Image:</label>
-      <input type="file" onChange={e=>{ this.setState({ upimage: e.target.value }); }} className="form-control"  name="upimage" />
 
-    </div>
       
      <button type="submit" className="btn btn-default btn-lg">Submit</button>
   </form>
