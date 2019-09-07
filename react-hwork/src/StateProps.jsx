@@ -17,7 +17,7 @@ export default class ParentComponent extends Component {
       <div>
         <Login name={this.state.name} /> 
         <Login email={this.state.email} /> 
-        <Login phone={this.state.phone} /> 
+        <Register phone={this.state.phone} /> 
         <Marksheet marksheet={this.state.marksheet} />
       </div>
     ); 
@@ -30,8 +30,7 @@ class Login extends Component {
     <div>
     <h2>Login User</h2>  
     <h4>Name:   {this.props.name}</h4> 
-    <h4>Email:  {this.props.email}</h4> 
-    <h4>Phone: {this.props.phone}</h4> 
+    <h4>Email:  {this.props.email}</h4>
     </div>
     );
   }
@@ -56,9 +55,10 @@ class Register extends Component {
     return (
       <div> 
           <h2>Register User</h2>
-      
-     
-     
+          <h4>Name:   {this.props.name}</h4> 
+          <h4>Email:  {this.props.email}</h4> 
+          <h4>Phone: {this.props.phone}</h4> 
+          
       </div>
     );
   }

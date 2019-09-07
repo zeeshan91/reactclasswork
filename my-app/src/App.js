@@ -11,7 +11,7 @@ function App() {
   return (
 <React.Fragment>
   <Header />
-  {/* <Slider /> */}
+  <Slider />
   <About />
   <Portfolio />
  <Footer /> 
