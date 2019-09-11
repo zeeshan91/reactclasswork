@@ -14,7 +14,6 @@ class MyFunctions extends Component {
         return (
             <div> 
                     Welcome to {this.state.Username("name")}
-                
                     <Function myName = {this.state.Username("name")} />
  
             </div>
@@ -29,8 +28,6 @@ class Function extends Component{
         return (
                 <div className="">
                     Pass parent function value to props :   {this.props.myName}
-                
-
                 </div>
 
         );

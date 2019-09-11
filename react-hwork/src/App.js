@@ -4,6 +4,7 @@ import './App.css';
 //import UserStateProps from './components/StateProps';
 //import UserRegistration from './components/RegisterForm';
 import MyFunctions from './components/Functions';
+import UserData from './components/ApiData';
 
 
 
@@ -13,8 +14,9 @@ class App extends Component {
       <React.Fragment>
        {/* <StudentForm />
         <UserStateProps />
-        <UserRegistration /> */}
-        <MyFunctions />
+        <UserRegistration /> 
+        <MyFunctions />*/}
+        <UserData />
 
      </React.Fragment>
     );
