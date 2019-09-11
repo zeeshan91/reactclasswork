@@ -8,14 +8,25 @@ class UserRegistration extends Component{
         email:"",        
         password:"",
         country:"",
-        
+        data:[]        
     }
 
     UserRegSubmit = e =>{
         e.prventDefault();
-        alert('User Register');
-        console.log('user');
+    //  alert('User Register');
+       // console.log('user');
 
+       this.state.data.push({
+          name:this.state.name,
+          companyname:this.state.companyname,
+          email:this.state.email,
+          password:this.state.password,
+          country:this.state.country,
+       });
+
+
+
+       this.setState(this.state);
     };
 
     render(){
@@ -48,7 +59,7 @@ class UserRegistration extends Component{
     
     <div className="form-group">
       <label for="password">Password:</label>
-      <input type="password"  onChange={e=>{ this.setState({ tel: e.target.value   }); }}
+      <input type="password"  onChange={e=>{ this.setState({ password: e.target.value   }); }}
                    required="required"         className="form-control" id="password" placeholder="Enter Password" name="password" />
     </div>
     
