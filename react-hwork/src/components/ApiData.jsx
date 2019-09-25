@@ -13,9 +13,7 @@ class ApiData extends Component{
             this.setState({ contactusr: data })
         })   
        .catch(console.log)
-
     } 
-
     render(){
             const stylelist = {
                 title:{
@@ -33,9 +31,8 @@ class ApiData extends Component{
             }
                      return (
                     <div>
-                        <h1 style={stylelist.title}>Employee List</h1>
-
-                        <ul>
+                        <h1 style={stylelist.title}>Employee List Api</h1>
+                      <ul>
                         {this.state.contactusr.map(item => (
                         <li style={stylelist.estyleLine} key={item.id}>
                             <b>Employee Id:</b>  {item.id}
@@ -49,15 +46,7 @@ class ApiData extends Component{
                         ))}
                     </ul>     
                     </div>  
-                    
             );
-            
-            
     }
-
-
-    
 }
 export default ApiData;
-
-
