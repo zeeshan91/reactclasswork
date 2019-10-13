@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
+
+
+
 export default class Register extends Component {
     constructor(props){
         super(props)
         this.state ={
+            uid:"",
             uname:"",
             companyname:"",
             tel:"",
@@ -15,29 +19,42 @@ export default class Register extends Component {
    }
 
    RegSubmit = e => {
-    e.preventDefault();
-       alert('User Details \n' +
+    
+     e.preventDefault();
+    
+  alert('User Details \n' +
         'Name: ' +  this.state.uname +' \n' + 
         'Company Name: ' +  this.state.companyname +' \n' + 
         'Telephone: ' +  this.state.tel +' \n' + 
         'Email: ' +  this.state.email +' \n' + 
-        'Password: ' + this.state.password );
-
-      e.target.reset(); 
+        'Password: ' + this.state.password );      
+       
+        this.setState({ 
+          uname:"",
+          companyname:"",
+          tel:"",
+          email:"",
+          password:""
+    });
+       
    }
-
+   
+   
+   
    fieldSubmit = e => {
         // console.log(e.target);
-   this.setState({ [e.target.name] : e.target.value });
-   
-   }
+    this.setState({ 
+    [e.target.name] : e.target.value
+    });
+
+  }
 
   render() {
     return (
-      <div> 
+      <div onSubmit={this.RegSubmit}> 
         <h1>User Registration</h1>
 
-        <form onSubmit={this.RegSubmit}>  
+        <form>  
 
             <label>Username
             <input type="text" name="uname" value={this.state.uname}  onChange={this.fieldSubmit} />
@@ -57,7 +74,7 @@ export default class Register extends Component {
             <br />
             <label>Password
             <input type="password" name="password" value={this.state.password}  onChange={this.fieldSubmit}  />
-            </label>--
+            </label>
             <br />
             <input type="submit" value="Submit" />
     </form>
